@@ -1,14 +1,13 @@
 alunos = list()
-
+    
 #Funções
 
 def cadastrar_aluno():
     lista_temp = list()
-    nome = input("Digite o nome do aluno: ")
-    lista_temp.append(nome)
-    nota = adicionar_notas()
-    lista_temp.append(nota)
-    alunos.append(lista_temp)
+    nome = input("\nDigite o nome do aluno: ")
+    lista_temp.append(nome)  # Adiciona o nome
+    lista_temp.append([0, 0, 0])  # Adiciona a lista de notas
+    alunos.append(lista_temp.copy())  # Adiciona a lista temporária à lista de alunos
     print(f"\nAluno {lista_temp[0]} cadastrado com sucesso!")
 
 def adicionar_notas():
