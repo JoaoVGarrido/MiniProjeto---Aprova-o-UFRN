@@ -21,11 +21,10 @@ def pesquisar_aluno(alunos_list):
 
 def exibir_aluno(posição, alunos_list):
     print(f"\nAluno: {alunos_list[posição][0]}")
-    print(f"Unidade 1: {alunos_list[posição][1][0]}")
-    print(f"Unidade 2: {alunos_list[posição][1][1]}")
-    print(f"Unidade 3: {alunos_list[posição][1][2]}")
+    for i in range(3):
+        print(f"Unidade {i+1}: {alunos_list[posição][1][i]}")
     print(f"Reposição: {alunos_list[posição][1][3]}")
-    return 
+    return
 
 def adicionar_notas(alunos_list):
     lista_notas = list()
